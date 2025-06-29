@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%); */
+    background: linear-gradient(135deg, #1d2839 0%, #172033 50%, #131a2d 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+.header {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #131a29;
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-name {
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.sign-out-btn {
+    background: white;
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sign-out-btn::before {
+    /* content: '→'; */
+    transform: rotate(90deg);
+}
+
+.sign-out-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.main-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.tabs-container {
+    display: flex;
+    gap: 1px;
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+}
+
+.tab.active {
+    background: white;
+    color: #1e293b;
+}
+
+.tab-count {
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+.add-task-section {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.add-task-form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.task-input {
+    flex: 1;
+    padding: 12px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 16px;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.task-input::placeholder {
+    color: #64748b;
+}
+
+.task-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.submit-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+.tasks-content {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+    min-height: 500px;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.task-card {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+
+.task-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.task-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.task-text {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.task-timestamp {
+    font-size: 0.8rem;
+    color: #64748b;
+    text-align: right;
+    margin-left: 16px;
+    min-width: 140px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.complete-btn {
+    background: #10b981;
+    color: white;
+    font-weight: bolder;
+}
+
+.complete-btn:hover {
+    background: #059669;
+}
+
+.archive-btn {
+    background: white;
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: bolder;
+}
+
+.archive-btn::before {
+    /* content: '📁'; */
+    font-size: 12px;
+    color: white;
+}
+
+.archive-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    
+}
+
+.todo-btn {
+    background: #3b82f6;
+    color: white;
+}
+
+.todo-btn:hover {
+    background: #2563eb;
+}
+
+.empty-state {
+    text-align: center;
+    color: #64748b;
+    padding: 60px 20px;
+}
+
+.empty-state-text {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.empty-state-subtext {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .user-section {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .add-task-form {
+        flex-direction: column;
+    }
+
+    .task-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .task-timestamp {
+        text-align: left;
+        margin-left: 0;
+        min-width: auto;
+    }
+
+    .task-actions {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .tabs-container {
+        flex-direction: column;
+    }
+}

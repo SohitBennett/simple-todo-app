@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Task Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="stylesheets/app.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="app-title">My Todo App</h1>
+            <div class="user-section">
+                <div class="user-info">
+                    <span class="user-name" id="userName">Loading...</span>
+                    <div class="avatar" id="userAvatar">KE</div>
+                </div>
+                <button class="sign-out-btn" id="signOutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="tabs-container">
+            <button class="tab active" data-tab="todo" id="todoTab">
+                Todo <span class="tab-count" id="todoCount">(0)</span>
+            </button>
+            <button class="tab" data-tab="completed" id="completedTab">
+                Completed <span class="tab-count" id="completedCount">(0)</span>
+            </button>
+            <button class="tab" data-tab="archived" id="archivedTab">
+                Archived <span class="tab-count" id="archivedCount">(0)</span>
+            </button>
+        </div>
+
+        <section class="add-task-section">
+            <div class="add-task-form">
+                <input type="text" class="task-input" id="taskInput" placeholder="Add your task (text-box)">
+                <button class="submit-btn" id="addTaskBtn">Submit</button>
+            </div>
+        </section>
+
+        <div class="tasks-content">
+            <div class="tab-content active" id="todoContent">
+                <div class="tasks-list" id="todoTasks">
+                    <div class="empty-state">
+                        <div class="empty-state-text">No tasks yet</div>
+                        <div class="empty-state-subtext">Add your first task above to get started</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="completedContent">
+                <div class="tasks-list" id="completedTasks">
+                    <div class="empty-state">
+                        <div class="empty-state-text">No completed tasks</div>
+                        <div class="empty-state-subtext">Complete some tasks to see them here</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="archivedContent">
+                <div class="tasks-list" id="archivedTasks">
+                    <div class="empty-state">
+                        <div class="empty-state-text">No archived tasks</div>
+                        <div class="empty-state-subtext">Archive tasks to organize your workspace</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
